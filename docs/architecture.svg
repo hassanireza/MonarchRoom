@@ -57,7 +57,7 @@
 
     <rect x="60" y="345" width="780" height="60" rx="6" fill="#12100a" stroke="#c9a763" stroke-dasharray="4 3"/>
     <text x="450" y="370" text-anchor="middle" fill="#a89f8e" font-size="11">
-      GameState (players, deck, community, pot, phase) &mdash; single source of truth, immutable snapshots emitted on every change
+      GameState (players, deck, community, pot, phase) &#8212; single source of truth, immutable snapshots emitted on every change
     </text>
     <text x="450" y="390" text-anchor="middle" fill="#a89f8e" font-size="11">
       Persisted to localStorage between sessions
