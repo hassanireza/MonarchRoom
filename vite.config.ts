@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 // Base path matches the GitHub Pages project URL: https://<user>.github.io/monarch-room/
 // Update this if the repository is renamed.
 export default defineConfig({
-  base: '/monarch-room/',
+  base: '/MonarchRoom/',
   plugins: [react()],
   build: {
     outDir: 'dist',
