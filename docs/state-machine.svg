@@ -1,0 +1,49 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0f0e"/>
+      <stop offset="100%" stop-color="#050605"/>
+    </linearGradient>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#c9a763"/>
+    </marker>
+  </defs>
+  <rect width="900" height="300" fill="url(#bg2)"/>
+
+  <g fill="#12100a" stroke="#c9a763" stroke-width="1.4">
+    <rect x="20" y="120" width="110" height="46" rx="8"/>
+    <rect x="180" y="120" width="110" height="46" rx="8"/>
+    <rect x="340" y="120" width="110" height="46" rx="8"/>
+    <rect x="500" y="120" width="110" height="46" rx="8"/>
+    <rect x="660" y="120" width="110" height="46" rx="8"/>
+    <rect x="770" y="30" width="110" height="46" rx="8"/>
+  </g>
+  <g fill="#f5efe2" font-size="13" text-anchor="middle">
+    <text x="75" y="148">Preflop</text>
+    <text x="235" y="148">Flop</text>
+    <text x="395" y="148">Turn</text>
+    <text x="555" y="148">River</text>
+    <text x="715" y="148">Showdown</text>
+    <text x="825" y="58">Payout</text>
+  </g>
+
+  <path d="M130 143 L180 143" stroke="#c9a763" stroke-width="1.4" marker-end="url(#arrow2)"/>
+  <path d="M290 143 L340 143" stroke="#c9a763" stroke-width="1.4" marker-end="url(#arrow2)"/>
+  <path d="M450 143 L500 143" stroke="#c9a763" stroke-width="1.4" marker-end="url(#arrow2)"/>
+  <path d="M610 143 L660 143" stroke="#c9a763" stroke-width="1.4" marker-end="url(#arrow2)"/>
+  <path d="M770 120 L790 90" stroke="#c9a763" stroke-width="1.4" marker-end="url(#arrow2)"/>
+
+  <!-- uncontested shortcut -->
+  <path d="M75 120 C 250 20, 650 20, 825 45" stroke="#75c899" stroke-width="1.2" fill="none" stroke-dasharray="5 4" marker-end="url(#arrow2)"/>
+  <text x="450" y="24" text-anchor="middle" fill="#75c899" font-size="11">all but one player folds: uncontested pot awarded immediately</text>
+
+  <text x="450" y="200" text-anchor="middle" fill="#a89f8e" font-size="12">
+    Every arrow only fires after isStreetDone() confirms all live players have matched the current bet
+  </text>
+  <text x="450" y="222" text-anchor="middle" fill="#a89f8e" font-size="12">
+    continueAction() never recurses synchronously; each step is scheduled through a single timer queue
+  </text>
+  <text x="450" y="244" text-anchor="middle" fill="#a89f8e" font-size="12">
+    so the UI can always repaint between a human click and the next AI decision
+  </text>
+</svg>
